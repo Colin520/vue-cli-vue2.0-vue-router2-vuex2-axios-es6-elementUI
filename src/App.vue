@@ -1,30 +1,43 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <router-link to="/">首页</router-link>
-      <router-link to="/hi">Hi页面</router-link>
-      <router-link :to="{name:'hi1',params:{username:'vueRouter',id:'888'}}">Hi页面1</router-link>
-      <router-link to="/hi/hi2">Hi页面2</router-link>
+    <!-- <img src="./assets/logo.png">
+    <router-view></router-view> -->
+    <!-- <router-view name='left'></router-view>
+    <router-view name='right'></router-view> -->
+    <!-- <router-view></router-view> -->
+    <TopSubfield>我是顶部</TopSubfield>
+    <div class="home-cen">
+      <Center>我是Center</Center>
     </div>
-    <p>{{ $route.name }}</p>
-    <router-view/>
   </div>
 </template>
 
 <script>
+import TopSubfield from '@/components/TopSubfield';
+import Center from '@/components/Center';
 export default {
-  name: 'App'
+  name: 'app',
+  components:{
+    TopSubfield,
+    Center
+  }
 }
 </script>
 
 <style>
+body,html{
+  padding: 0px;
+  margin: 0px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.home-cen{
+  width: 100%;
+  background-color: #eff2f7;
 }
 </style>
