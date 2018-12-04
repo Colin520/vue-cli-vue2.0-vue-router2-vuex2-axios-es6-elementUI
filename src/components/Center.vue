@@ -11,7 +11,7 @@ export default {
   name:'center',
     data(){
         return{
-            msg:'我是中间的Center-YF'
+            msg:'我是中间的Center-YFF'
         }
     },
     store,
